@@ -1,0 +1,33 @@
+<p>about works!</p>
+<form action="http://localhost:9080/api/listings" method="post">
+
+  <div class="container">
+    <label for="name"><b>Product Name</b></label>
+    <input type="text" placeholder="Enter product name" name="name" required>
+
+    <label for="price"><b>Price</b></label>
+    <input type="number" placeholder="Enter product price" name="price" required>
+
+    <label for="description"><b>Description</b></label>
+    <input type="text" placeholder="Enter product description" name="description" required>
+
+    <input type="hidden" name="image" value={{fileName}} required>
+
+    <button type="submit" (click)="formSubmit()">Login</button>
+  </div>
+
+</form>
+
+
+<input type="file" class="file-input"
+  (change)="onFileSelected($event)" #fileUpload accept="image/jpg, image/png, image/jpeg">
+
+<div class="file-upload">
+
+   {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+        <p>attach_file</p>
+    </button>
+</div>

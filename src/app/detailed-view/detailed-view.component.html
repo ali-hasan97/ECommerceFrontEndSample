@@ -1,0 +1,12 @@
+<!-- To retrieve an image from s3, use the url https://full-stack-images.s3.us-east-2.amazonaws.com/<insert file name here> -->
+  <!-- The file name can be retrieved by making a get request to the database and getting the "image" field of the listing -->
+  <!-- Hard coded file name here for now -->
+
+  <div>
+    <ul>
+      <li>{{name}}</li>
+      <li>{{description}}</li>
+      <li>{{price}}</li>
+    </ul>
+  </div>
+  <img src="https://full-stack-images.s3.us-east-2.amazonaws.com/{{image}}" width="200px" height="200px">
