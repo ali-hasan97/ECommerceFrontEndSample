@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { S3ServiceService } from '../s3-service.service';
 
 @Component({
@@ -12,6 +12,8 @@ export class AboutComponent {
 
   fileName = '';
   file!: File;
+  // const headers = new HttpHeaders().set('Authorization', 'Basic ' + btoa(username + ':' + password));
+  formData!: FormData;
 
   constructor(private s3Service: S3ServiceService) { }
 
@@ -26,5 +28,12 @@ export class AboutComponent {
     if (this.file) {
       this.s3Service.uploadFile(this.file);
     }
+    // return false;
+  }
+
+  public onSubmit() {
+    // this.http.post("http://localhost:9080/api/listings", FormData, { header }).subscribe(
+    //   (response) => console.log("success"). (error) => {"error submit"}
+    // );
   }
 }

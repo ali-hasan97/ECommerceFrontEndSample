@@ -3,8 +3,9 @@
     <a class="nav-item nav-link" routerLink="/">Home</a>
     <a class="nav-item nav-link" routerLink="/about">About</a>
     <a class="nav-item nav-link" routerLink="/contact">Contact</a>
-    <a class="nav-item nav-link" routerLink="/login">Login</a>
-    <a class="nav-item nav-link" routerLink="/detailed-view">detail</a>
+    <!-- <a class="nav-item nav-link" routerLink="/login">Login</a> -->
+    <a class="nav-item nav-link" routerLink="/detailed-view">Detail</a>
+    <a *ngIf="isLoggedIn" class="nav-item nav-link" routerLink="/login" (click)=handleLogout()>Logout</a>
     <div class="Search">
       <input type="text" placeholder="Search...">
       <input type="submit">
