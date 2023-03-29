@@ -1,15 +1,11 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <div class="navbar-nav">
+  <div class="navbar-nav nav-fill w-100">
     <a class="nav-item nav-link" routerLink="/">Home</a>
     <a class="nav-item nav-link" routerLink="/about">About</a>
-    <a class="nav-item nav-link" routerLink="/contact">Contact</a>
-    <!-- <a class="nav-item nav-link" routerLink="/login">Login</a> -->
-    <a class="nav-item nav-link" routerLink="/detailed-view">Detail</a>
-    <a *ngIf="isLoggedIn" class="nav-item nav-link" routerLink="/login" (click)=handleLogout()>Logout</a>
-    <div class="Search">
-      <input type="text" placeholder="Search...">
-      <input type="submit">
-    </div>
+    <a class="nav-item nav-link" routerLink="/checkout">Checkout</a>
+    <!-- <a class="nav-item nav-link" id="log" routerLink="/login">Login</a> -->
+    <a *ngIf="isLoggedIn" class="nav-item nav-link" routerLink="/logout" (click)=handleLogout()>Log Out</a>
+    <a class="nav-item nav-link" routerLink="/upload">Upload</a>
   </div>
 </nav>
 <router-outlet></router-outlet>

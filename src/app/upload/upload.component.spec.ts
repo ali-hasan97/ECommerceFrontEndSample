@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailedViewComponent } from './detailed-view.component';
+import { UploadComponent } from './upload.component';
 
-describe('DetailedViewComponent', () => {
-  let component: DetailedViewComponent;
-  let fixture: ComponentFixture<DetailedViewComponent>;
+describe('UploadComponent', () => {
+  let component: UploadComponent;
+  let fixture: ComponentFixture<UploadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailedViewComponent ]
+      declarations: [ UploadComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DetailedViewComponent);
+    fixture = TestBed.createComponent(UploadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

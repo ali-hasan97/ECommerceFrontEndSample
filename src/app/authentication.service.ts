@@ -7,7 +7,7 @@ import { BehaviorSubject, map } from 'rxjs';
 })
 export class AuthenticationService {
 
-  // BASE_PATH: 'http://localhost:8080'
+  // BASE_PATH: 'http://localhost:9080'
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 
   public username!: string;
@@ -54,17 +54,17 @@ export class AuthenticationService {
     return this.loggedIn.asObservable();
   }
 
-  getUsername() {
-    return this.username;
-  }
-  
-  getPassword() {
-    return this.password;
-  }
-
   getLoggedInUserName() {
     let user = sessionStorage.getItem(this.USER_NAME_SESSION_ATTRIBUTE_NAME)
     if (user === null) return ''
     return user
+  }
+
+  getUsername(){
+    return this.username;
+  }
+
+  getPassword(){
+    return this.password;
   }
 }

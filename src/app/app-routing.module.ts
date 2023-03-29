@@ -4,20 +4,18 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { DetailedViewComponent } from './detailed-view/detailed-view.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { UploadComponent } from './upload/upload.component';
 import { AuthGuardService } from './auth-guard.service';
-import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
-{path: 'login', component: LoginComponent},
 {path: '', component: HomeComponent, canActivate: [AuthGuardService]},
 {path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
+{path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
-{path: 'about', component: AboutComponent, canActivate: [AuthGuardService]},
-{path: 'detailed-view', component: DetailedViewComponent, canActivate: [AuthGuardService]},
-{path: 'contact', component: ContactComponent, canActivate: [AuthGuardService]},
-{path: 'logout', component: LogoutComponent}];
+{path: 'about', component: AboutComponent},
+{path: 'upload', component: UploadComponent, canActivate: [AuthGuardService]},
+{path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuardService]}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

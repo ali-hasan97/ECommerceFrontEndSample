@@ -7,8 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'Genspark';
+export class AppComponent implements OnInit {
+
   isLoggedIn = false;
 
   constructor(private route: ActivatedRoute,
@@ -16,10 +16,10 @@ export class AppComponent implements OnInit{
     private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
-    this.authenticationService.isUserLoggedInAtPresent().subscribe(loggedIn => {
+    this.authenticationService.isUserLoggedInAtPresent().subscribe(loggedIn=>{
       this.isLoggedIn = loggedIn;
-      console.log('menu ->' + this.isLoggedIn);
     });
+    console.log('menu ->' + this.isLoggedIn);
   }
 
   handleLogout() {

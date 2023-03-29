@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "./static",
+            "outputPath": "dist/myfirstapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -28,7 +28,12 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["src/assets/check.js"]
+            "scripts": [
+              "src/assets/check.js", 
+              "src/assets/store.js",
+              "src/assets/retrieve.js",
+              "src/assets/create.js"
+            ]
           },
           "configurations": {
             "production": {

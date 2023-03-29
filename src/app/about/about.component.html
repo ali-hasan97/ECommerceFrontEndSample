@@ -1,33 +1,18 @@
-<p>about works!</p>
-<form (ngSubmit)=onSubmit() method="post">
-
-  <div class="container">
-    <label for="name"><b>Product Name</b></label>
-    <input type="text" placeholder="Enter product name" name="name" [(ngModel)]="name" required>
-
-    <label for="price"><b>Price</b></label>
-    <input type="number" step="0.01" placeholder="Enter product price" name="price" [(ngModel)]="price" required>
-
-    <label for="description"><b>Description</b></label>
-    <input type="text" placeholder="Enter product description" name="description" [(ngModel)]="description" required>
-
-    <input type="hidden" name="image" value={{fileName}} required>
-
-    <button type="submit" (click)=formSubmit()>Login</button>
-  </div>
-
-</form>
-
-
-<input type="file" class="file-input"
-  (change)="onFileSelected($event)" #fileUpload accept="image/jpg, image/png, image/jpeg">
-
-<div class="file-upload">
-
-   {{fileName || "No file uploaded yet."}}
-
-    <button mat-mini-fab color="primary" class="upload-btn"
-      (click)="fileUpload.click()">
-        <p>attach_file</p>
-    </button>
+<div class = "col d-flex justify-content-center">
+    <div class="card bg-info text-white" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">About Us</h5>
+            <p class="card-text">Welcome to the eCommerce site where you can buy and sell products.</p>
+        </div>
+    </div>
 </div>
+<div class="col d-flex justify-content-center">
+    <div class="card bg-info text-white" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Contact Info</h5>
+            <p class="card-text"><b>Phone:</b>(123) 456-7890</p>
+            <p class="card-text"><b>Email:</b>ecommerce123@domain.net</p>
+        </div>
+    </div>
+</div>
+
